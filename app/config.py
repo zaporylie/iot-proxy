@@ -6,7 +6,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 ROOT_PATH = BASE_DIR = os.path.join(os.path.dirname(__file__), '..')
 CSRF_ENABLED = True
-PORT = os.environ.get('PORT')
+PORT = int(os.environ.get('PORT', 5000))
 DEBUG = os.environ.get('DEBUG', False)
 
 with open('settings.yaml', 'r') as f:
