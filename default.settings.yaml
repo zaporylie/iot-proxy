@@ -1,0 +1,4 @@
+devices:
+  google:
+    host: www.google.com
+    protocole: https
