@@ -12,4 +12,4 @@ ENV DEBUG=TRUE
 
 ADD ./ /var/www/html
 
-CMD [ "python", "proxy.py" ]
+CMD [ "python", "web.py" ]
