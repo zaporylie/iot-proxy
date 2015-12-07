@@ -1,6 +1,7 @@
 from app import app
 from app import config
 from app.error import InvalidUsage
+from app.decorator import crossdomain
 from flask import stream_with_context
 from flask import Response
 from flask import request
@@ -10,6 +11,7 @@ import requests
 
 @app.route('/<device>/', methods=["GET", "POST"])
 @app.route('/<device>/<path>', methods=["GET", "POST"])
+@crossdomain(origin='*')
 def home(device, path = ""):
     
     try:
